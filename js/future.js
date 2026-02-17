@@ -1,16 +1,16 @@
 function html_card(title="",desc="",date="",img="") {
-    let html = `<div class="history_card purpule">
+    let html = `<div class="history_card yellow">
         <div style="grid-column: 1; grid-row: 2;">
             <h2>${title}</h2>
             <div class="history_card_description">
                 <div style="height: 10px; display: grid; grid-template-columns: 1fr 1fr 4fr;">
-                    <hr class="purpule" style="grid-column: 1;"></hr>
+                    <hr class="yellow" style="grid-column: 1;"></hr>
                     <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px;">${date}</p>
-                    <hr class="purpule" style="grid-column: 3;"></hr>
+                    <hr class="yellow" style="grid-column: 3;"></hr>
                 </div>
             <p style="margin-left: 10px;">${desc}</p></div></div>
         <div style="grid-column: 2; grid-row: 2; width: 100%; height: 100%;">
-            <img src="../resources/${img}" class="purpule" style="height: 200px; border-radius: 5px; border-width: 5px; border-style: solid;"></img>
+            <img src="../resources/${img}" class="yellow" style="height: 200px; border-radius: 5px; border-width: 5px; border-style: solid;"></img>
         </div></div>`
     const templete = document.createElement("template");
     templete.innerHTML = html.trim();
