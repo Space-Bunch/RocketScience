@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="67.73333mm"
+   height="67.73333mm"
+   viewBox="0 0 67.73333 67.73333"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="icon-purple.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.0167041"
+     inkscape:cx="47.703163"
+     inkscape:cy="224.74583"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g10"
+     showguides="false" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-39.01115,-20.977694)">
+    <g
+       id="g10"
+       transform="matrix(0.9409084,0.94090844,-0.94090844,0.9409084,60.34926,-69.769786)">
+      <path
+         id="path3"
+         style="fill:#54377a;fill-opacity:1;stroke-width:0.264583"
+         d="M 72.877817,27.093083 64.020993,42.433749 H 81.73464 Z m -9.219593,17.422709 9.219593,26.817485 9.219592,-26.817485 z"
+         sodipodi:nodetypes="cccccccc" />
+      <path
+         style="fill:#54377a;fill-opacity:1;stroke-width:0.264583"
+         d="m 70.761149,71.333421 -4.7664,-14.182878 -8.127505,14.077251 7.913954,13.707369 V 72.374368 Z"
+         id="path5" />
+      <path
+         style="fill:#54377a;fill-opacity:1;stroke-width:0.264583"
+         d="m 74.994482,71.333421 4.7664,-14.182878 8.127505,14.077251 -7.913954,13.707369 V 72.374368 Z"
+         id="path6" />
+    </g>
+  </g>
+</svg>
