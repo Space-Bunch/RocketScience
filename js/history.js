@@ -1,11 +1,11 @@
 function html_card(title="",desc="",date="",img="") {
-    let html = `<div class="history_card purpule">
+    let html = `<div class="history_card midium purpule">
         <div style="grid-column: 1; grid-row: 2;">
-            <h2>${title}</h2>
+            <h2> </h2>
             <div class="history_card_description">
                 <div style="height: 10px; display: grid; grid-template-columns: 1fr 1fr 4fr;">
                     <hr class="purpule" style="grid-column: 1;"></hr>
-                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px;">${date}</p>
+                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px;"><b>${title}</b></p>
                     <hr class="purpule" style="grid-column: 3;"></hr>
                 </div>
             <p style="margin-left: 10px;">${desc}</p></div></div>
@@ -29,7 +29,7 @@ function add_card(json="test.json"){
 
 window.onload = function() {
     // ВСТЯВЛЯТЬ ИМЕНА СЮДА \/ \/
-    const cards = ["test","test2","test3","test4"].reverse()
+    const cards = ["history_anch","XIII","history_new_age","XX","XXI"].reverse()
     for (let card = cards.length; card--; card > 0){
         add_card(`${cards[card]}.json`)
     }

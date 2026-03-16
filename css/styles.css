@@ -114,7 +114,7 @@ button.sp_button:hover {
 }
 
 .green {
-    color: #bbddc2;
+    color: #ddf3e1;
     background-color: #5da36b;
     outline-color: #347a4f;
     border-color: #347a4f;
@@ -124,20 +124,65 @@ div.history_card {
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 0px 210px;
-    height: 210px;
-    padding: 10px;
     margin: 50px 5% 0;
     outline-width: 5px;
     outline-style: solid;
     border-radius: 2px;
 }
 
+div.baner_card {
+    display: grid;
+    margin: 50px 5% 0;
+    outline-width: 5px;
+    outline-style: solid;
+    border-radius: 2px;
+}
+
+div.exstra {
+    height: 800px;
+    padding: 10px;
+}
+
+div.exstra:hover {
+    height: 820px;
+    padding: 10px;
+}
+
+div.unreasonable {
+    height: 1080px;
+    padding: 10px;
+}
+
+div.unreasonable:hover {
+    height: 1100px;
+    padding: 10px;
+}
+
+
+div.normal {
+    height: 210px;
+    padding: 10px;
+}
+
+div.normal:hover {
+    height: 240px;
+    padding: 10px;
+}
+
+div.midium {
+    height: 310px;
+    padding: 10px;
+}
+
+div.midium:hover {
+    height: 320px;
+    padding: 10px;
+}
+
 div.history_card:hover {
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 20px 210px;
-    height: 240px;
-    padding: 10px;
     margin: 50px 2.5% 0;
     outline-width: 5px;
     outline-style: solid;

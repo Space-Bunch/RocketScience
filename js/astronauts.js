@@ -1,5 +1,5 @@
 function html_card(title="",desc="",date="",img="") {
-    let html = `<div class="history_card yellow">
+    let html = `<div class="history_card normal yellow">
         <div style="grid-column: 1; grid-row: 2;">
             <h2>${title}</h2>
             <div class="history_card_description">

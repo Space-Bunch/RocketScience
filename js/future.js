@@ -1,5 +1,5 @@
 function html_card(title="",desc="",date="",img="") {
-    let html = `<div class="history_card yellow">
+    let html = `<div class="history_card midium yellow">
         <div style="grid-column: 1; grid-row: 2;">
             <h2>${title}</h2>
             <div class="history_card_description">
@@ -29,7 +29,7 @@ function add_card(json="test.json"){
 
 window.onload = function() {
     // ВСТЯВЛЯТЬ ИМЕНА СЮДА \/ \/
-    const cards = ["test","test2","test3","test4"].reverse()
+    const cards = ["sience_foundings","space_tour","colonies"].reverse()
     for (let card = cards.length; card--; card > 0){
         add_card(`${cards[card]}.json`)
     }
