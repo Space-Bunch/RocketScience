@@ -128,6 +128,7 @@ div.history_card {
     outline-width: 5px;
     outline-style: solid;
     border-radius: 2px;
+    overflow:scroll;
 }
 
 div.baner_card {
@@ -136,6 +137,7 @@ div.baner_card {
     outline-width: 5px;
     outline-style: solid;
     border-radius: 2px;
+    overflow:scroll;
 }
 
 div.exstra {
