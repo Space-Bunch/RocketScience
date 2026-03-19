@@ -15,6 +15,7 @@ body.history {
     width: 100vw;
     height: 100vh;
     margin: 0 0 0 0;
+    padding-bottom: 1100px;
     background-color: #1c1c1c; 
     background-image: url("/resources/bg.svg");
     background-size: 256px 128px;
@@ -25,6 +26,7 @@ body.astronauts {
     width: 100vw;
     height: 100vh;
     margin: 0 0 0 0;
+    padding-bottom: 1700px;
     background-color: #1c1c1c; 
     background-image: url("/resources/bg-yellow.svg");
     background-size: 256px 128px;
@@ -35,6 +37,7 @@ body.future {
     width: 100vw;
     height: 100vh;
     margin: 0 0 0 0;
+    padding-bottom: 350px;
     background-color: #1c1c1c; 
     background-image: url("/resources/bg-yellow.svg");
     background-size: 256px 128px;
@@ -45,6 +48,7 @@ body.staged_rocket {
     width: 100vw;
     height: 100vh;
     margin: 0 0 0 0;
+    padding-bottom: 2100px;
     background-color: #1c1c1c; 
     background-image: url("/resources/bg-green.svg");
     background-size: 256px 128px;
