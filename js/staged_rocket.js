@@ -48,7 +48,7 @@ window.onload = function() {
 function html_card(title="",desc="",date="",img="",size="exstra") {
     let html = `<div class="baner_card ${size} green">
         <div style="margin-left: 20%; margin-right: 20%; margin-bottom: -100px;">
-            <img src="../resources/${img}" class="green" style="height: 41.710vh; width: 53.542vw; border-radius: 5px; border-width: 5px; border-style: solid;"></img>
+            <img src="../resources/${img}" class="green" style="height: calc(width * 0.779014); width: 53.542vw; border-radius: 5px; border-width: 5px; border-style: solid;"></img>
         </div>
         <div>
             <div class="history_card_description">
