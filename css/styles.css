@@ -144,26 +144,6 @@ div.baner_card {
     overflow:scroll;
 }
 
-div.exstra {
-    height: 800px;
-    padding: 10px;
-}
-
-div.exstra:hover {
-    height: 820px;
-    padding: 10px;
-}
-
-div.unreasonable {
-    height: 1080px;
-    padding: 10px;
-}
-
-div.unreasonable:hover {
-    height: 1100px;
-    padding: 10px;
-}
-
 
 div.normal {
     height: 210px;
@@ -185,6 +165,27 @@ div.midium:hover {
     padding: 10px;
 }
 
+div.exstra {
+    height: 800px;
+    padding: 10px;
+}
+
+div.exstra:hover {
+    height: 820px;
+    padding: 10px;
+}
+
+div.unreasonable {
+    height: 1080px;
+    padding: 10px;
+}
+
+div.unreasonable:hover {
+    height: 1100px;
+    padding: 10px;
+}
+
+
 div.history_card:hover {
     display: grid;
     grid-template-columns: 4fr 1fr;
@@ -194,7 +195,6 @@ div.history_card:hover {
     outline-style: solid;
     border-radius: 2px;
 }
-
 
 hr {
     display: block;

@@ -1,5 +1,5 @@
-function html_card(title="",desc="",date="",img="") {
-    let html = `<div class="history_card midium yellow">
+function html_card(title="",desc="",date="",img="",size="midium") {
+    let html = `<div class="history_card ${size} yellow">
         <div style="grid-column: 1; grid-row: 2;">
             <h2> </h2>
             <div class="history_card_description">
@@ -24,7 +24,7 @@ function add_card(json="test.json"){
             if (!response.ok){throw new Error(`HTTP error! Status: ${response.status}`);}
             return response.json();
         })
-        .then(data => root_element.appendChild(html_card(data.title,data.description,data.date,data.img)));
+        .then(data => root_element.appendChild(html_card(data.title,data.description,data.date,data.img,data.size)));
 }
 
 window.onload = function() {
