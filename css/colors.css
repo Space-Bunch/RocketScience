@@ -6,10 +6,10 @@
 }
 
 .yellow {
-    color: #362d15;
-    background-color: #dabc6b;
-    border-color: rgb(104, 72, 33);
-    outline-color: rgb(235, 162, 71);
+    background-color: #5e63b6;
+    outline-color: #5951aa;
+    border-color: #5951aa;
+    color: #dee0ff;
 }
 
 .green {
@@ -17,4 +17,8 @@
     background-color: #5da36b;
     outline-color: #347a4f;
     border-color: #347a4f;
+}
+
+svg {
+    --color_icon: #5951aa;
 }
