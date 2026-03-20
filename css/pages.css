@@ -6,7 +6,7 @@ body.index {
     width: 100vw;
     height: 100vh;
     margin: 0 0 0 0;
-    background-image: url("./resources/bg.svg");
+    background-image: url("../resources/bg.svg");
     background-size: 256px 128px;
 }
 

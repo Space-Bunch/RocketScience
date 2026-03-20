@@ -5,7 +5,7 @@ function html_card(title="",desc="",date="",img="",size="normal") {
             <div class="history_card_description">
                 <div style="height: 10px; display: grid; grid-template-columns: 1fr 1fr 4fr;">
                     <hr class="yellow" style="grid-column: 1;"></hr>
-                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px; font-size:105%"><b>${date}</b></p>
+                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px; font-size:105%; text-wrap: nowrap;"><b>${date}</b></p>
                     <hr class="yellow" style="grid-column: 3;"></hr>
                 </div>
             <p style="margin-left: 10px;">${desc}</p></div></div>

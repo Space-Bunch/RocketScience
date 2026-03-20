@@ -9,8 +9,17 @@ div.history_card {
     overflow:scroll;
 }
 
-div.baner_card {
+div.history_card:hover {
     display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 0px 210px;
+    margin: 50px 5% 0;
+    outline-width: 5px;
+    outline-style: solid;
+    border-radius: 2px;
+}
+
+div.baner_card {
     margin: 50px 5% 0;
     outline-width: 5px;
     outline-style: solid;
@@ -18,14 +27,8 @@ div.baner_card {
     overflow:scroll;
 }
 
-div.history_card:hover {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: 20px 210px;
-    margin: 50px 2.5% 0;
-    outline-width: 5px;
-    outline-style: solid;
-    border-radius: 2px;
+div.history_card_description {
+    /*потерянный стиль*/
 }
 
 hr {

@@ -14,7 +14,7 @@ div.midium {
 }
 
 div.midium:hover {
-    height: 320px;
+    height: 370px;
     padding: 10px;
 }
 
@@ -37,3 +37,45 @@ div.unreasonable:hover {
     height: 1100px;
     padding: 10px;
 }
+
+/*
+div.normal {
+    height: calc(210px + calc(53.542vw * 0.779014));
+    padding: 10px;
+}
+
+div.normal:hover {
+    height: calc(240px + calc(53.542vw * 0.779014));
+    padding: 10px;
+}
+
+div.midium {
+    height: calc(310px + calc(53.542vw * 0.779014));
+    padding: 10px;
+}
+
+div.midium:hover {
+    height: calc(320px + calc(53.542vw * 0.779014));
+    padding: 10px;
+}
+
+div.exstra {
+    height: calc(800px + calc(53.542vw * 0.779014));
+    padding: 10px;
+}
+
+div.exstra:hover {
+    height: calc(820px + calc(53.542vw * 0.779014));
+    padding: 10px;
+}
+
+div.unreasonable {
+    height: calc(1080px + calc(53.542vw * 0.779014));
+    padding: 10px;
+}
+
+div.unreasonable:hover {
+    height: calc(1080px + calc(53.542vw * 0.779014));
+    padding: 10px;
+}
+*/
