@@ -5,6 +5,7 @@
     border-color: #54377a;
 }
 
+/*раньше был жёлтым, сейчас синий*/
 .yellow {
     background-color: #5e63b6;
     outline-color: #5951aa;
@@ -19,6 +20,14 @@
     border-color: #347a4f;
 }
 
-svg {
-    --color_icon: #5951aa;
+#icon.purpule:hover {
+    background-color: #724d9a;
+}
+
+#icon.yellow:hover {
+    background-color: #6271b8;
+}
+
+#icon.green:hover {
+    background-color: #63a969;
 }

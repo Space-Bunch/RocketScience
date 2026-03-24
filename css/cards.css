@@ -39,3 +39,11 @@ hr {
     border: 0;
     border-top: 5px solid;
 }
+
+a.card_anchor{
+    position: relative;
+    width: 0px;
+    height: 0px;
+    display: block;
+    top: -15vh;
+}

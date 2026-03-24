@@ -63,6 +63,19 @@ div.header {
     border-bottom-style: solid;
 }
 
+img.icon {
+    height:100%;
+    border-right-width: 1vh;
+    border-right-style: solid;
+    transition: 0.1s;
+}
+
+img.icon:hover {
+    height:103%;
+    border-right-width: 1vh;
+    border-right-style: solid;
+}
+
 div.idex_buttons_groop {
     display: grid;
     grid-column: 2;
@@ -79,6 +92,7 @@ button {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    transition: 0.1s;
 }
 
 button:hover {
@@ -93,6 +107,7 @@ button.sp_button {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    transition: 0.1s;
 }
 
 button.sp_button:hover {
