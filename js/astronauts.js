@@ -1,5 +1,5 @@
 function html_card_list(size="normal",entryes=[]) {
-    let entryes_list = ""
+    let entryes_list = `<h>${navigator.userAgent}</h>`
     for(let line = entryes.length; line--; line > 0){
         entryes_list = entryes_list+`<a class="yellow link" style="" href="#${entryes[line]}">${entryes[line].replaceAll(".json","")}</a><br>\n`
     }
@@ -22,6 +22,7 @@ function html_card_list(size="normal",entryes=[]) {
 }
 
 function html_card(title="",desc="",date="",img="",size="normal",json="") {
+    
     let html = `<div class="history_card ${size} yellow">
         <a class="card_anchor" name="${json}" style="grid-column: 1; grid-row: 2;"></a>
         <div style="grid-column: 1; grid-row: 2;">
