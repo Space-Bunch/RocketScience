@@ -1,3 +1,13 @@
+function get_font_size(){
+    let font_size =`font-size: 20px;`
+    if(navigator.userAgent.search("Mobile") > 0 || 
+        navigator.userAgent.search("AppleWebKit") > 0 ||
+        navigator.userAgent.search("Android") > 0){
+            font_size = ""
+        }
+    return font_size;
+}
+
 function html_card(title="",desc="",date="",img="",size="midium") {
     let html = `<div class="history_card ${size} yellow">
         <div style="grid-column: 1; grid-row: 2;">
@@ -5,10 +15,10 @@ function html_card(title="",desc="",date="",img="",size="midium") {
             <div class="history_card_description">
                 <div style="height: 10px; display: grid; grid-template-columns: 1fr 1.5fr 4fr;">
                     <hr class="yellow" style="grid-column: 1;"></hr>
-                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px;  text-wrap: nowrap; font-size: 20px;"><b>${title}</b></p>
+                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px;  text-wrap: nowrap; ${get_font_size()}"><b>${title}</b></p>
                     <hr class="yellow" style="grid-column: 3;"></hr>
                 </div>
-            <p style="margin-left: 10px; font-size: 20px;">${desc}</p></div></div>
+            <p style="margin-left: 10px; ${get_font_size()}">${desc}</p></div></div>
         <div style="grid-column: 2; grid-row: 2; width: 100%; height: 100%;">
             <img src="../resources/${img}" class="yellow" style="height: 200px; border-radius: 5px; border-width: 5px; border-style: solid;"></img>
         </div></div>`

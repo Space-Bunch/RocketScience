@@ -1,3 +1,13 @@
+function get_font_size(){
+    let font_size =`font-size: 20px;`
+    if(navigator.userAgent.search("Mobile") > 0 || 
+        navigator.userAgent.search("AppleWebKit") > 0 ||
+        navigator.userAgent.search("Android") > 0){
+            font_size = ""
+        }
+    return font_size;
+}
+
 function html_card(title="",desc="",date="",img="",size="exstra") {
     let html = `<div class="baner_card ${size} green">
         <div style="margin-left: 20%; margin-right: 20%; margin-bottom: 0;">
@@ -7,10 +17,10 @@ function html_card(title="",desc="",date="",img="",size="exstra") {
             <div class="history_card_description">
                 <div style="height: 10px; display: grid; grid-template-columns: 1fr 1fr 1fr;">
                     <hr class="green" style="grid-column: 1;"></hr>
-                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px; text-align: center; font-size: large; text-wrap: nowrap; font-size: 20px;"><b> ${title}</b></p>
+                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px; text-align: center; font-size: large; text-wrap: nowrap; ${get_font_size()}"><b> ${title}</b></p>
                     <hr class="green" style="grid-column: 3;"></hr>
                 </div>
-            <p style="margin-left: 10px; font-size: 20px;">${desc}</p></div></div>
+            <p style="margin-left: 10px; ${get_font_size()}">${desc}</p></div></div>
         </div>`
     const templete = document.createElement("template");
     templete.innerHTML = html.trim();
