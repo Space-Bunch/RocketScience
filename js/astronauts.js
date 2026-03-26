@@ -24,7 +24,7 @@ function html_card_list(size="normal",entryes=[]) {
                 </div>
             <p style="margin-left: 10px; ${get_font_size()}">${entryes_list}</p></div></div>
         <div style="grid-column: 2; grid-row: 2; width: 100%; height: 100%;">
-            <img src="../resources/uhhhhhh512.png" class="yellow" style="height: 200px; border-radius: 5px; border-width: 5px; border-style: solid;"></img>
+            <img src="../resources/list.png" class="yellow" style="height: 200px; border-radius: 5px; border-width: 5px; border-style: solid;"></img>
         </div></div>`
     const templete = document.createElement("template");
     templete.innerHTML = html.trim();
