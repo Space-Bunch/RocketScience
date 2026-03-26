@@ -47,3 +47,15 @@ a.card_anchor{
     display: block;
     top: -15vh;
 }
+
+button.card_sourse {
+    padding: 0 20px;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+    outline-width: 0;
+    position: fixed;
+    background-color: oklch(
+        from currentColor l c h / calc(alpha - 0.5)
+        );
+}

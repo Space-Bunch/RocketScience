@@ -118,6 +118,24 @@ button.sp_button:hover {
     margin-left: 0;
 }
 
+button.static {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0s;
+    margin-top: 0%;
+    margin-left: 0%;
+}
+
+button.static:hover {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0s;
+    margin-top: 0%;
+    margin-left: 0%;
+}
+
 img.icon {
     height:100%;
 }

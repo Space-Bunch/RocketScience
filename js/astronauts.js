@@ -11,7 +11,7 @@ function get_font_size(){
 function html_card_list(size="normal",entryes=[]) {
     let entryes_list = ""
     for(let line = entryes.length; line--; line > 0){
-        entryes_list = entryes_list+`<a class="yellow link" style="" href="#${entryes[line]}">${entryes[line].replaceAll(".json","")}</a><br>\n`
+        entryes_list = entryes_list+`<a class="yellow link" href="#${entryes[line]}">${entryes[line].replaceAll(".json","")}</a><br>\n`
     }
     let html = `<div class="history_card ${size} yellow">
         <div style="grid-column: 1; grid-row: 2;">
@@ -32,11 +32,13 @@ function html_card_list(size="normal",entryes=[]) {
 }
 
 function html_card(title="",desc="",date="",img="",size="normal",json="") {
-    
-    let html = `<div class="history_card ${size} yellow">
+    let html = `
+    <div class="history_card ${size} yellow">
         <a class="card_anchor" name="${json}" style="grid-column: 1; grid-row: 2;"></a>
         <div style="grid-column: 1; grid-row: 2;">
-            <h2>${title}</h2>
+            <div>
+                <button class="static yellow" popovertarget="${json+'_sourse'}"><h2>${title}</h2></button>
+            </div>
             <div class="history_card_description">
                 <div style="height: 10px; display: grid; grid-template-columns: 1fr 1fr 4fr;">
                     <hr class="yellow" style="grid-column: 1;"></hr>
@@ -52,25 +54,17 @@ function html_card(title="",desc="",date="",img="",size="normal",json="") {
     return templete.content.firstElementChild;
 }
 
-/*function crutch(ls){
-    file_data = ls
-}*/
-
-/*const file_data = []
-function set_fd(dt){file_data = []; file_data.push(dt); console.log(file_data);
-}*/
-
-/*function get_json_data(json="test.json"){
-    let file_data_f = ""
-    let file = 
-        fetch(`../resources/cards/${json}.json`)
-            .then((response) => {
-                if (!response.ok){throw new Error(`HTTP error! Status: ${response.status}`);}
-                return response.json();
-            })
-            .then(fetch(data).then(data => {file_data_f = file_data_f + data.title}));
-    console.log(file_data_f);  
-}*/
+function html_card_souse(json="",soures="") {
+    let html = `
+    <button id="${json+'_sourse'}" class="card_sourse static transperent_yellow" popover popovertarget="${json+'_sourse'}">
+        <div class="yellow" style="top: 10%; height: 80%; border-radius: 2px; outline-width: 5px; outline-style: solid;">
+            <iframe style="width: 100%; height: 100%;" src="${soures}"></iframe><br>
+        </div>
+    </button>`
+    const templete = document.createElement("template");
+    templete.innerHTML = html.trim();
+    return templete.content.firstElementChild;
+}
 
 function add_card_list(entryes=[]){
     let root_element = window.root_tag;
@@ -84,7 +78,8 @@ function add_card(json="test.json"){
             if (!response.ok){throw new Error(`HTTP error! Status: ${response.status}`);}
             return response.json();
         })
-        .then(data => root_element.appendChild(html_card(data.title,data.description,data.date,data.img,data.size,json)));
+        .then(data => {root_element.appendChild(html_card(data.title,data.description,data.date,data.img,data.size,json)); return data})
+        .then(data => root_element.appendChild(html_card_souse(json,data.sourse)));
 }
 
 window.onload = function() {
