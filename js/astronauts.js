@@ -31,9 +31,9 @@ function html_card_list(size="normal",entryes=[]) {
     return templete.content.firstElementChild;
 }
 
-function html_card(title="",desc="",date="",img="",size="normal",json="") {
+function html_card(title="",desc="",date="",img="",size="static_normal",json="") {
     let html = `
-    <div class="history_card ${size} yellow">
+    <div class="astronauts_card ${size} yellow">
         <a class="card_anchor" name="${json}" style="grid-column: 1; grid-row: 2;"></a>
         <div style="grid-column: 1; grid-row: 2;">
             <div>

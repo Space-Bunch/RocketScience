@@ -9,6 +9,17 @@ div.normal:hover {
     padding: 10px;
 }
 
+div.static_normal {
+    height: 210px;
+    padding: 10px;
+    transition: 0s;
+}
+
+div.static_normal:hover {
+    height: 210px;
+    padding: 10px;
+}
+
 div.midium {
     height: 310px;
     padding: 10px;

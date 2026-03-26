@@ -19,6 +19,17 @@ div.history_card:hover {
     border-radius: 2px;
 }
 
+div.astronauts_card {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 0px 210px;
+    margin: 50px 5% 0;
+    outline-width: 5px;
+    outline-style: solid;
+    border-radius: 2px;
+    overflow:scroll;
+}
+
 div.baner_card {
     margin: 50px 5% 0;
     outline-width: 5px;
