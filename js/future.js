@@ -48,7 +48,7 @@ function add_card(json="test.json"){
             if (!response.ok){throw new Error(`HTTP error! Status: ${response.status}`);}
             return response.json();
         })
-        .then(data => root_element.appendChild(html_card(data.title,data.description,data.date,data.img,data.size,json)))
+        .then(data => {root_element.appendChild(html_card(data.title,data.description,data.date,data.img,data.size,json)); return data})
         .then(data => root_element.appendChild(html_card_souse(json,data.sourse)));
 }
 
