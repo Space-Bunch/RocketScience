@@ -1,5 +1,7 @@
-function get_font_size(){
-    let font_size =`font-size: 20px;`
+// Получить размер текста. scale - маштаб текста. is_big - новый стиль/старый стиль.
+function get_font_size(scale=1.0,is_big=true){
+    let font_size =`font-size: ${150*scale}%;`
+    if(!is_big){font_size =`font-size: 20px;`}
     if(navigator.userAgent.search("Mobile") > 0 || 
         navigator.userAgent.search("AppleWebKit") > 0 ||
         navigator.userAgent.search("Android") > 0){
@@ -8,6 +10,7 @@ function get_font_size(){
     return font_size;
 }
 
+// Получить карточку. title - заголовок. desc - описание. date - дата. img - иконка. size - размер. json - название файла.
 function html_card(title="",desc="",date="",img="",size="midium",json="") {
     let html = `<div class="history_card ${size} yellow">
         <div style="grid-column: 1; grid-row: 2;">
@@ -15,8 +18,8 @@ function html_card(title="",desc="",date="",img="",size="midium",json="") {
             <div class="history_card_description">
                 <div style="height: 10px; display: grid; grid-template-columns: 1fr 1.5fr 4fr;">
                     <hr class="yellow" style="grid-column: 1;"></hr>
-                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px;  text-wrap: nowrap; ${get_font_size()}">
-                        <button class="static yellow" popovertarget="${json+'_sourse'}"><b>${title}</b></button>
+                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px;  text-wrap: nowrap;">
+                        <button class="static yellow" popovertarget="${json+'_sourse'}"><b style="${get_font_size()}">${title}</b></button>
                     </p>
                     <hr class="yellow" style="grid-column: 3;"></hr>
                 </div>
@@ -29,6 +32,7 @@ function html_card(title="",desc="",date="",img="",size="midium",json="") {
     return templete.content.firstElementChild;
 }
 
+// Получить html для исотчника. json - название файла. soures - источник (url ссылака).
 function html_card_souse(json="",soures="") {
     let html = `
     <button id="${json+'_sourse'}" class="card_sourse static transperent_yellow" popover popovertarget="${json+'_sourse'}">
@@ -41,6 +45,7 @@ function html_card_souse(json="",soures="") {
     return templete.content.firstElementChild;
 }
 
+// Добавить карточку. json - название файла.
 function add_card(json="test.json"){
     let root_element = window.root_tag;
     let file = fetch(`../resources/cards/${json}`)
@@ -52,9 +57,11 @@ function add_card(json="test.json"){
         .then(data => root_element.appendChild(html_card_souse(json,data.sourse)));
 }
 
+// (функция запускается при загрузке страницы)
 window.onload = function() {
     // ВСТЯВЛЯТЬ ИМЕНА СЮДА \/ \/
     const cards = ["sience_foundings","space_tour","colonies"].reverse()
+    // добовление всех карточек.
     for (let card = cards.length; card--; card > 0){
         add_card(`${cards[card]}.json`)
     }

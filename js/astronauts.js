@@ -1,5 +1,7 @@
-function get_font_size(){
-    let font_size =`font-size: 20px;`
+// Получить размер текста. scale - маштаб текста. is_big - новый стиль/старый стиль.
+function get_font_size(scale=1.0,is_big=true){
+    let font_size =`font-size: ${150*scale}%;`
+    if(!is_big){font_size =`font-size: 20px;`}
     if(navigator.userAgent.search("Mobile") > 0 || 
         navigator.userAgent.search("AppleWebKit") > 0 ||
         navigator.userAgent.search("Android") > 0){
@@ -8,6 +10,7 @@ function get_font_size(){
     return font_size;
 }
 
+// Получить карточку со списком карточек. size - размер. entryes - список id якорей карточек.
 function html_card_list(size="normal",entryes=[]) {
     let entryes_list = ""
     for(let line = entryes.length; line--; line > 0){
@@ -19,7 +22,7 @@ function html_card_list(size="normal",entryes=[]) {
             <div class="history_card_description">
                 <div style="height: 10px; display: grid; grid-template-columns: 1fr 1.5fr 4fr;">
                     <hr class="yellow" style="grid-column: 1;"></hr>
-                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px; text-wrap: nowrap; ${get_font_size()}"><b>Лист карточек</b></p>
+                    <p style="grid-column: 2; margin-left: 30px; margin-right: 30px; margin-top: 7px; text-wrap: nowrap;"><b  style="${get_font_size()}">Лист карточек</b></p>
                     <hr class="yellow" style="grid-column: 3;"></hr>
                 </div>
             <p style="margin-left: 10px; ${get_font_size()}">${entryes_list}</p></div></div>
@@ -31,6 +34,7 @@ function html_card_list(size="normal",entryes=[]) {
     return templete.content.firstElementChild;
 }
 
+// Получить карточку. title - заголовок. desc - описание. date - дата. img - иконка. size - размер. json - название файла.
 function html_card(title="",desc="",date="",img="",size="static_normal",json="") {
     let html = `
     <div class="astronauts_card ${size} yellow">
@@ -54,6 +58,7 @@ function html_card(title="",desc="",date="",img="",size="static_normal",json="")
     return templete.content.firstElementChild;
 }
 
+// Получить html для исотчника. json - название файла. soures - источник (url ссылака).
 function html_card_souse(json="",soures="") {
     let html = `
     <button id="${json+'_sourse'}" class="card_sourse static transperent_yellow" popover popovertarget="${json+'_sourse'}">
@@ -66,11 +71,13 @@ function html_card_souse(json="",soures="") {
     return templete.content.firstElementChild;
 }
 
+// Добавить карточку со списком карточек. entryes - список id якорей карточек.
 function add_card_list(entryes=[]){
     let root_element = window.root_tag;
     root_element.append(html_card_list("normal",entryes))
 }
 
+// Добавить карточку. json - название файла.
 function add_card(json="test.json"){
     let root_element = window.root_tag;
     let file = fetch(`../resources/cards/${json}`)
@@ -82,13 +89,16 @@ function add_card(json="test.json"){
         .then(data => root_element.appendChild(html_card_souse(json,data.sourse)));
 }
 
+// (функция запускается при загрузке страницы)
 window.onload = function() {
     // ВСТЯВЛЯТЬ ИМЕНА СЮДА \/ \/
     const cards = ["Юрий Алексеевич Гагарин", "Нил Олден Армстронг","Франко Малерба","Зигмунд Йен","Харрисон Шмит","Александр Михайлович Самокутяев","Алексей Леонов","Герман Титов","Валентина Терешкова"].reverse()
     let entryes = []
+    // состовляет спикок для add_card_list().
     for (let entry = cards.length; entry--; entry > 0){
         entryes.push(`${cards[entry]}.json`)
     }
+    // добовление всех карточек.
     add_card_list(entryes)
     for (let card = cards.length; card--; card > 0){
         add_card(`${cards[card]}.json`)
