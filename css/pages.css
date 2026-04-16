@@ -57,7 +57,7 @@ body.staged_rocket {
 div.header {
     overflow: inherit;
     position: fixed;
-    height: 10vh;
+    height: calc(7vh + 6vw);
     width: 100vw;
     border-bottom-width: 1vh;
     border-bottom-style: solid;
@@ -147,4 +147,13 @@ h.info_footer {
     margin-bottom: 10px;
     outline-width: 10px;
     border-radius: 10px;
+}
+
+h6.title{
+    position: fixed;
+    left: calc(9vh + 6vw);
+    top: 10px; 
+    margin: 0;
+    font-size: 6vw;
+    text-wrap: nowrap;
 }
