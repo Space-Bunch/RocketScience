@@ -154,6 +154,6 @@ h6.title{
     left: calc(9vh + 6vw);
     top: 10px; 
     margin: 0;
-    font-size: 6vw;
+    font-size: min(6vw, 80px);
     text-wrap: nowrap;
 }
